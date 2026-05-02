@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs
+*.log
+
+# Removed web interface
+static/
+
+# IDE/editor
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Model backups / extra exports
+*.bak
+*.pkl

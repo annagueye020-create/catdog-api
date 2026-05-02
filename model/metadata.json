@@ -1,0 +1,17 @@
+{
+  "classes": [
+    "chat",
+    "chien"
+  ],
+  "class_indices": {
+    "chat": 0,
+    "chien": 1
+  },
+  "img_size": [
+    224,
+    224
+  ],
+  "model": "ResNet50",
+  "test_accuracy": 1.0,
+  "num_classes": 2
+}
