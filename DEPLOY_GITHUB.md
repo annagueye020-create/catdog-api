@@ -80,3 +80,36 @@ curl.exe -X POST "http://localhost:8000/predict" -F "file=@C:\Users\dell\Picture
 ## Pour heberger l'API en ligne
 
 Utilise un service qui execute Python, par exemple Render, Railway ou Hugging Face Spaces. GitHub Pages ne suffit pas pour FastAPI.
+
+### Render
+
+Le fichier `render.yaml` est deja ajoute au projet.
+
+Apres le push GitHub :
+
+1. Va sur Render.
+2. Cree un nouveau `Blueprint`.
+3. Connecte le repository GitHub `catdog-api`.
+4. Render lira automatiquement `render.yaml`.
+5. Lance le deploy.
+
+Configuration utilisee :
+
+```text
+Root Directory: api
+Build Command: pip install -r requirements.txt
+Start Command: uvicorn main:app --host 0.0.0.0 --port $PORT
+```
+
+Apres le deploy, teste :
+
+```text
+https://TON-URL-RENDER/health
+https://TON-URL-RENDER/model
+```
+
+Prediction :
+
+```powershell
+curl.exe -X POST "https://TON-URL-RENDER/predict" -F "file=@C:\Users\dell\Pictures\image.jpg"
+```
