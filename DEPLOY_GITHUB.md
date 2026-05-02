@@ -51,7 +51,7 @@ Remplace `catdog-api` par le nom de ton repository si besoin :
 
 ```powershell
 git branch -M main
-git remote add origin https://github.com/annagueye/catdog-api.git
+git remote add origin https://github.com/annagueye020-create/catdog-api.git
 git push -u origin main
 ```
 
