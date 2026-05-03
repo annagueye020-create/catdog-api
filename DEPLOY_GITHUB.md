@@ -96,10 +96,14 @@ Apres le push GitHub :
 Configuration utilisee :
 
 ```text
-Root Directory: api
-Build Command: pip install -r requirements.txt
-Start Command: uvicorn main:app --host 0.0.0.0 --port $PORT
+Root Directory: laisser vide
+Build Command: pip install -r api/requirements.txt
+Start Command: cd api && uvicorn main:app --host 0.0.0.0 --port $PORT
 ```
+
+Le fichier `runtime.txt` force Python 3.10, compatible avec TensorFlow et NumPy.
+
+Si Blueprint ne marche pas, utilise `New Web Service` au lieu de `Blueprint` avec les memes valeurs ci-dessus.
 
 Apres le deploy, teste :
 

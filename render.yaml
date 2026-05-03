@@ -3,6 +3,5 @@ services:
     name: catdog-api
     env: python
     plan: free
-    rootDir: api
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    buildCommand: pip install -r api/requirements.txt
+    startCommand: cd api && uvicorn main:app --host 0.0.0.0 --port $PORT
